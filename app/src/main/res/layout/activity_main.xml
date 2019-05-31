@@ -1,80 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
+    android:id="@+id/activity_main"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:id="@+id/activity_main"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    android:orientation="vertical"
-    android:background="@drawable/newbackground">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:id="@+id/image_logo"
-            app:srcCompat="@drawable/dicee_logo"
-            android:layout_centerInParent="true"/>
-
-    </RelativeLayout>
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="horizontal">
+    android:background="@drawable/newbackground"
+    tools:context=".MainActivity">
 
 
-        <ImageView
-            android:id="@+id/image_leftDice"
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="0dp"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:layout_height="wrap_content"
 
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/dice2"/>
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dicee_logo" />
 
-        <ImageView
-            android:id="@+id/image_rightDice"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/image_leftDice"
 
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/dice1"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-    </LinearLayout>
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_rightDice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dice2" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp">
+    <ImageView
+        android:id="@+id/image_rightDice"
 
-        <Button
-            android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_leftDice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dice1" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
+    <Button
+        android:id="@+id/rollButton"
 
-            android:text="@string/button_text"
-            android:textColor="@android:color/background_light"
-            android:background="@color/colorPrimary" />
-    </RelativeLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/button_text"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
